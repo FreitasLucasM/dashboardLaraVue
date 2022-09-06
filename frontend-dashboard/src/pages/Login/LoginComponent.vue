@@ -39,8 +39,8 @@
         </b-form-checkbox-group>
       </b-form-group>
 
-      <b-button variant="primary">Logar</b-button>
-      <b-button variant="info">Esqueci minha senha</b-button>
+      <b-button variant="primary" type="submit">Logar</b-button>
+      <b-button variant="info" type="reset">Esqueci minha senha</b-button>
     </b-form>
   </div>
             </div>
@@ -49,12 +49,13 @@
 </template>
 
 <script>
+
     export default {
+      name: 'LoginComponent',
       data() {
         return {
           form: {
             email: '',
-            name: '',
             checked: []
           },
           show: true
@@ -63,13 +64,12 @@
       methods: {
         onSubmit(event) {
           event.preventDefault()
-          alert(JSON.stringify(this.form))
+          this.$router.push({name: 'home'})
         },
         onReset(event) {
           event.preventDefault()
           // Reset our form values
           this.form.email = ''
-          this.form.name = ''
           this.form.checked = []
           // Trick to reset/clear native browser form validation state
           this.show = false

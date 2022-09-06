@@ -1,0 +1,12 @@
+@import 'node_modules/bootstrap/scss/bootstrap';
+// BootstrapVue and its default variables
+@import 'node_modules/bootstrap-vue/src/index.scss';
+
+@import './colors';
+
+
+
+
+.bg-light {
+    background-color: $purple !important;
+}

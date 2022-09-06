@@ -11,10 +11,13 @@
         width: 25rem;
         height: 28rem;
         background-color: $purple;
-        border-radius: 10px;
         display: flex;
         align-items: center;
         justify-content: center;
+        border-radius: 52px;
+        background: linear-gradient(45deg, #918ae1, #aca4ff);
+        box-shadow:  30px -30px 59px #6963a3,
+             -30px 30px 59px #d9cfff;
         header{
             width: 100%;
             display: flex;
@@ -23,6 +26,10 @@
                 font-size: 28px;
                 color: $white;
             }
+        }
+        @media (max-width: 700px){
+            width: 19rem;
+            height: 23rem;
         }
     }
 }
