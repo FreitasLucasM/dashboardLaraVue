@@ -1,6 +1,6 @@
 <template>
     <div>      
-      <b-sidebar id="sidebar-1" no-close-on-route-change=true shadow>
+      <b-sidebar id="sidebar-1" :no-close-on-route-change="true" shadow>
         <div class="px-3 py-2">
             <div class="top">
                 <div class="avatar">
@@ -14,8 +14,8 @@
                 </div>
 
             </div>
-            <div class="menu" id="side-bar">
-                <ul>
+            <div class="menu">
+                <ul id="side-bar">
                     <li><router-link :to="{name: 'home'}"><b-icon icon="house-fill" font-scale="1"></b-icon>Inicio</router-link></li>
                     <li><router-link :to="{name: 'clients'}"><b-icon icon="people-fill" font-scale="1"></b-icon>Clientes</router-link></li>
                     <li><router-link :to="{name: 'products'}"><b-icon icon="cart4" font-scale="1"></b-icon>Produtos</router-link></li>
@@ -29,13 +29,10 @@
   </template>
 
 <script>
+
+
 export default {
-    name:'SidebarComponent',
-    watch: {
-    '$route' () {
-      $('#side-bar').collapse('hide');
-    }
-  }
+    name:'SidebarComponent'
     
 }
 </script>

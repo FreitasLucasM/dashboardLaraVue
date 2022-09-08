@@ -36,7 +36,9 @@ import ClientesComponent from '../Dashboard/components/ClientesComponent.vue';
 import ProductComponent from '../Dashboard/components/ProductComponent.vue';
 const axios = require('axios').default;
 
+const link = 'http://127.0.0.1:8000/api/'
 export default {
+    
     name:'HomeComponent',
     data(){
         return{
@@ -47,16 +49,16 @@ export default {
     methods:{
        async getUsers(){
         try{
-            const response = await axios.get('https://jsonplaceholder.typicode.com/users')
+            const response = await axios.get(`${link}usuarios`)
             .then(response=>response.data)
-            this.users = response
+            this.users = response.data
         }catch(e){
             console.log(e)
         }
         },
         async getProducts(){
             try{
-            const response = await axios.get('http://127.0.0.1:8000/api/produtos')
+            const response = await axios.get(`${link}produtos`)
             .then(response=>response.data)
             this.products = response.data
             }

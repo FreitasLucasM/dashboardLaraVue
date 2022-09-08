@@ -18,16 +18,20 @@
         return {
           fields: [
             {
-              key: 'name',
+              key: 'nome',
               label: 'Nome'
             },
             {
-            key:'phone',
+            key:'contato',
             label: 'Contato'
             },
             {
             key:'email',
             label: 'E-mail'
+            },
+            {
+            key:'idade',
+            label: 'Idade'
             }
           ]
         }
