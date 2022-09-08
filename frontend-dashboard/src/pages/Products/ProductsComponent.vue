@@ -2,7 +2,9 @@
     <div>
         <DashboardComponent>
             <div slot="slot-pages" class="content-page">
-                <h2>produtos</h2>
+                <header class="title-pages">
+                    <p>Produtos</p>
+                </header>
             </div>
         </DashboardComponent>
     </div>
