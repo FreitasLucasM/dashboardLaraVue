@@ -1,11 +1,7 @@
-<template>
-    <div class="col-12 col-md-4">
-        <div class="container">           
+<template>        
         <b-card border-variant="dark" header="Clientes" align="center">
         <b-card-text><b-table-lite striped hover :items="users" :fields="fields"></b-table-lite></b-card-text>
-      </b-card>
-    </div>
-    </div>
+        </b-card>
   </template>
   
   <script>
